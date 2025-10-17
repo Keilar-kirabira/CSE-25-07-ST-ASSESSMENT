@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Form</title>
-    <link rel="stylesheet" href="./public/css/signup.css">
+    <title>login Form</title>
+    <link rel="stylesheet" href="./public/css/login.css">
 </head>
 <body>
- <div class="signup-container">
+ <div class="login-container">
         <h1>Login</h1>
-     <form id="loginForm" novalidate>
+        <form id="loginForm" novalidate>
             <div class="form-group">
                 <input type="email" id="email" placeholder="Email or Phone Number" required>
-            <div class="form-group">
-                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
             </div>
-            <button type="submit" class="signup-btn">LOGIN</button>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login-btn">LOGIN</button>
         </form>
-        <div class="login-link">
-            Have an account? - <a href="#">Login</a>
+        <div class="signup-link">
+            Don't have an account? - <a href="/signup">Signup</a>
         </div>
     </div>
     <script src="./public/js/signup.js"></script>

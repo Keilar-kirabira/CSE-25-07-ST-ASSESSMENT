@@ -13,6 +13,7 @@ require('dotenv').config();
 const UserModel = require("./models/userModel");
 //import routes
 const authRoutes  = require("./routes/authRoutes");
+const dashboardRoutes  = require("./routes/dashboardRoutes");
 //2.Instantiations
 const app = express();
 const port = 3000;
@@ -21,8 +22,6 @@ const port = 3000;
 
 //settingup mongodb connections
 mongoose.connect(process.env.MONGODB_URL, {
-  // useNewUrlParser: true,
-  // useUnifiedTopology: true
 });
 
 mongoose.connection
@@ -66,6 +65,7 @@ passport.deserializeUser(UserModel.deserializeUser());
 
 //5.Routes
 app.use("/",authRoutes);
+app.use("/",dashboardRoutes);
 
 
 

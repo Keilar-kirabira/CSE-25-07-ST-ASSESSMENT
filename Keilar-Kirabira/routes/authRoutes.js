@@ -11,28 +11,47 @@ router.get("/signup", (req, res) => {
 
 router.post("/signup", async (req, res) => {               
   try {
-    const user = new UserModel(req.body);
-    console.log(req.body);
-    let existingUser = await UserModel.findOne({email:req.body.email});
-    if (existingUser){
-      return res.status(400).send("Already registered email")
-    }else{
-      await UserModel.register(user, req.body.password,(error)=>{
-         if(error){
-            throw error;
-         }
-         res.redirect("/"); // login route
-      })
+    console.log('Request body:', req.body);
+    
+    const { fullName, email, phoneNumber, password } = req.body;
+    
+    
+    if (!fullName || !email || !phoneNumber || !password) {
+      return res.status(400).send("All fields are required");
     }
+
+    // Check if user exists
+    let existingUser = await UserModel.findOne({email: email});
+    if (existingUser) {
+      return res.status(400).send("Email already registered");
+    }
+
+    
+    const newUser = new UserModel({
+      fullName,
+      email,
+      phoneNumber
+    });
+
+    UserModel.register(newUser, password, (error, user) => {
+      if (error) {
+        console.log('Registration error:', error);
+        return res.status(400).send(`Registration failed: ${error.message}`);
+      }
+      
+      console.log('User registered successfully:', user);
+      res.redirect("/"); // login route
+    });
+
   } catch (error) {
-   res.status(400).send("Try again")
+    console.log('Catch block error:', error);
+    res.status(400).send("Registration failed. Please try again.");
   } 
-  // added this res.redirect that directs me to the login page from sginup.
 });
 
 
 router.get("/", (req, res) => {
-  res.render("/");
+  res.render("index");
 });
 
 router.post("/", (req,res) =>{

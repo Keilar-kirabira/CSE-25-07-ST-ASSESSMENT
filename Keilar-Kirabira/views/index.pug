@@ -1,0 +1,18 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title login Form
+  link(rel='stylesheet' href='/css/login.css')
+.login-container
+  h1 Login
+  form#loginForm(novalidate='')
+    .form-group
+      input#email(type='email' placeholder='Email or Phone Number' required='')
+    .form-group
+      input#password(type='password' placeholder='Password' required='')
+    button.login-btn(type='submit') LOGIN
+  .signup-link
+    | Don&apos;t have an account? - 
+    a(href='/signup') Signup
+script(src='./js/login.js')

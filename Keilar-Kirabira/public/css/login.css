@@ -13,12 +13,11 @@
             min-height: 100vh;
             padding: 20px;
         }
-
-        .signup-container {
+        
+          .login-container {
             width: 100%;
             max-width: 500px;
         }
-
         h1 {
             text-align: center;
             font-size: 2.5em;
@@ -26,41 +25,8 @@
             color: #333;
         }
 
-        .success-message {
-            display: none;
-            background-color: #22c55e;
-            color: white;
-            padding: 18px 20px;
-            margin-bottom: 20px;
-            font-size: 16px;
-            position: relative;
-        }
-
-        .success-message.show {
-            display: block;
-        }
-
-        .success-message a {
-            color: white;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-
-        .close-btn {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         input {
@@ -73,6 +39,7 @@
             color: #333;
             outline: none;
             transition: border-color 0.3s;
+            border-radius: 5px;
         }
 
         input:focus {
@@ -92,7 +59,7 @@
             border-color: #22c55e;
         }
 
-        .signup-btn {
+        .login-btn {
             width: 100%;
             padding: 20px;
             font-size: 18px;
@@ -104,26 +71,27 @@
             transition: background-color 0.3s ease;
             letter-spacing: 1px;
             margin-top: 10px;
+            border-radius: 5px;
         }
 
-        .signup-btn:hover {
+        .login-btn:hover {
             background-color: #6b4968;
         }
 
-        .login-link {
+        .signup-link {
             text-align: center;
             margin-top: 20px;
             color: #888;
             font-size: 14px;
         }
 
-        .login-link a {
-            color: rgb(84, 84, 183);;
+        .signup-link a {
+            color: rgb(84, 84, 183);
             text-decoration: none;
         }
 
-        .login-link a:hover {
+        .signup-link a:hover {
             text-decoration: underline;
         }
 
-        
+      
