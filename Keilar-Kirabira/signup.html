@@ -15,21 +15,21 @@
             <button class="close-btn" onclick="closeMessage()">X</button>
         </div>
 
-        <form id="signupForm"action="/" method="post" novalidate>
+        <form id="signupForm" novalidate>
             <div class="form-group">
-                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="text" id="fullName" placeholder="Full Name" name="fullName" required>
             </div>
             <div class="form-group">
-                <input type="email" id="email" placeholder="Email" required>
+                <input type="email" id="email" placeholder="Email" name="email" required>
             </div>
             <div class="form-group">
-                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <input type="tel" id="phone" placeholder="Phone Number" name="phoneNumber" required>
             </div>
             <div class="form-group">
-                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="password" placeholder="Password" name="password" required>
             </div>
             <div class="form-group">
-                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" name="confirmPassword" required>
             </div>
             <button type="submit" class="signup-btn">SIGNUP</button>
         </form>
@@ -37,6 +37,6 @@
             Have an account? - <a href="#">Login</a>
         </div>
     </div>
-    <script src="./public/js/"></script>
+    <script src="./public/js/signup.js"></script>
 </body>
 </html>

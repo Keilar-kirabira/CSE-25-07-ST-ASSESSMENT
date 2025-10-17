@@ -18,7 +18,7 @@ const app = express();
 const port = 3000;
 
 //3.Configurations
-app.locals.moment = moment;
+
 //settingup mongodb connections
 mongoose.connect(process.env.MONGODB_URL, {
   // useNewUrlParser: true,
