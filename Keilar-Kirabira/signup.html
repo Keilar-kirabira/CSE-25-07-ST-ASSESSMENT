@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="./public/css/signup.css">
+</head>
+<body>
+ <div class="signup-container">
+        <h1>Signup</h1>
+        
+        <div id="successMessage" class="success-message">
+            Account created successfully!<a href="#">Login</a>
+            <button class="close-btn" onclick="closeMessage()">X</button>
+        </div>
+
+        <form id="signupForm"action="/" method="post" novalidate>
+            <div class="form-group">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="signup-btn">SIGNUP</button>
+        </form>
+        <div class="login-link">
+            Have an account? - <a href="#">Login</a>
+        </div>
+    </div>
+    <script src="./public/js/"></script>
+</body>
+</html>
