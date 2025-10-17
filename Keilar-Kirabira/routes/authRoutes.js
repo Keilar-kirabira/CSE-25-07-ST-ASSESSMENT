@@ -4,7 +4,7 @@ const passport = require('passport');
 
 const UserModel = require("../models/userModel");
 //getting the signup form
-router.get("/signup", (req, res) => {
+router.get("/signup",  (req, res) => {
   res.render("signup", { title: "signup page" });
 });
 
